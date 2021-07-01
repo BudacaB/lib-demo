@@ -27,7 +27,7 @@
 	<developers>
 		<developer>
 			<name>Bogdan Budaca</name>
-			<email>email@email.com</email>
+			<email>budhy_b@yahoo.com</email>
 			<organization>Bogdan Budaca</organization>
 			<organizationUrl>www.bogdanbudaca.com</organizationUrl>
 		</developer>
@@ -35,7 +35,7 @@
 	<scm>
 		<connection>scm:git:git@github.com:budacab/lib-demo.git</connection>
 		<developerConnection>scm:git:ssh://github.com:budacab/lib-demo.git</developerConnection>
-		<url>https://github.com/BudacaB/lib-demo</url>
+		<url>https://github.com/BudacaB/lib-demo/tree/master</url>
 	</scm>
 
 	<profiles>
