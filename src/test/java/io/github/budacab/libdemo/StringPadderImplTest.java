@@ -1,57 +1,59 @@
-package io.github.budacab.libdemo
+package io.github.budacab.libdemo;
 
-import org.assertj.core.api.Assertions.assertThat
-import org.junit.jupiter.api.Test
-import org.junit.jupiter.api.TestTemplate
+import org.junit.jupiter.api.Test;
+
+import static org.assertj.core.api.Assertions.assertThat;
 
 class StringPadderImplTest {
-    private val stringPadder = StringPadderFactory.createStringPadder()
+
+    private final StringPadderImpl stringPadder = (StringPadderImpl) StringPadderFactory.createStringPadder();
 
     @Test
-    fun padLeft() {
+    void padLeft() {
         assertThat(stringPadder.padLeft("thegreatapi.com", 20))
                 .isEqualTo("     thegreatapi.com");
     }
 
     @Test
-    fun padLeftWithZeros() {
+    void padLeftWithZeros() {
         assertThat(stringPadder.padLeft("thegreatapi.com", 20, '0'))
                 .isEqualTo("00000thegreatapi.com");
     }
 
     @Test
-    fun padRight() {
+    void padRight() {
         assertThat(stringPadder.padRight("thegreatapi.com", 20))
                 .isEqualTo("thegreatapi.com     ");
     }
 
     @Test
-    fun padRightWithZeros() {
+    void padRightWithZeros() {
         assertThat(stringPadder.padRight("thegreatapi.com", 20, '0'))
                 .isEqualTo("thegreatapi.com00000");
     }
 
     @Test
-    fun padLeftWithInvalidTotalLength() {
+    void padLeftWithInvalidTotalLength() {
         assertThat(stringPadder.padLeft("thegreatapi.com", 3))
                 .isEqualTo("thegreatapi.com");
     }
 
     @Test
-    fun padLeftWithZerosInvalidTotalLength() {
+    void padLeftWithZerosInvalidTotalLength() {
         assertThat(stringPadder.padLeft("thegreatapi.com", 3, '0'))
                 .isEqualTo("thegreatapi.com");
     }
 
     @Test
-    fun padRightInvalidTotalLength() {
+    void padRightInvalidTotalLength() {
         assertThat(stringPadder.padRight("thegreatapi.com", 3))
                 .isEqualTo("thegreatapi.com");
     }
 
     @Test
-    fun padRightWithZerosInvalidTotalLength() {
+    void padRightWithZerosInvalidTotalLength() {
         assertThat(stringPadder.padRight("thegreatapi.com", 3, '0'))
                 .isEqualTo("thegreatapi.com");
     }
+
 }

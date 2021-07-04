@@ -23,8 +23,8 @@ Add the following dependency:
 The code
 
 ```
-String paddedString = this.stringPadder.padLeft("My String", 30, '-');
-System.out.println(paddedString);
+StringPadder test = StringPadderFactory.createStringPadder();
+System.out.println(test.padLeft("test", 6, 'b'));
 ```
 
 Will print:
